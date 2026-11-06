@@ -80,3 +80,14 @@ test('place search finds Dutch towns with their time zone', () => {
   assert.ok(searchPlaces('s-Hertogenbosch, NL').length > 0 || searchPlaces('Den Bosch').length > 0);
   assert.equal(searchPlaces('Zürich')[0].country, 'CH');
 });
+
+test('place search accepts a country after the town', () => {
+  for (const q of ['Naarden netherlands', 'Naarden, Nederland', 'Naarden, NL', 'naarden Holland']) {
+    const [hit] = searchPlaces(q);
+    assert.equal(hit?.name, 'Naarden', q);
+    assert.equal(hit.country, 'NL', q);
+  }
+  assert.equal(searchPlaces('Paris france')[0].country, 'FR');
+  assert.equal(searchPlaces('Den Haag')[0].name, 'The Hague');
+  assert.equal(searchPlaces('Hong Kong')[0].country, 'HK');
+});
