@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/*.js": {
+      "memory": 1024,
+      "maxDuration": 15,
+      "includeFiles": "{ephe/**,zoneinfo/**,node_modules/all-the-cities/**,node_modules/geo-tz/data/timezones.geojson.*}"
+    }
+  }
+}

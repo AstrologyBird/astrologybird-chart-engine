@@ -1,0 +1,23 @@
+{
+  "name": "astrologybird-chart-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Astrologybird chart calculations (Swiss Ephemeris). AGPL-3.0.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "all-the-cities": "^3.1.0",
+    "geo-tz": "^8.1.11",
+    "sweph": "^2.10.3-8"
+  },
+  "devDependencies": {
+    "astronomy-engine": "^2.1.19"
+  }
+}
