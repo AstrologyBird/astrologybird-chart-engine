@@ -91,3 +91,11 @@ test('place search accepts a country after the town', () => {
   assert.equal(searchPlaces('Den Haag')[0].name, 'The Hague');
   assert.equal(searchPlaces('Hong Kong')[0].country, 'HK');
 });
+
+test('chart includes the centaurs Chiron, Pholus and Nessus', () => {
+  const c = computeChart({ date: '1990-10-03', time: '11:50', lat: 52.3, lon: 5.16, timezone: 'Europe/Amsterdam' });
+  const by = Object.fromEntries(c.points.map((p) => [p.key, p]));
+  assert.equal(by.chiron.sign, 'cancer');
+  assert.equal(by.pholus.sign, 'cancer');
+  assert.equal(by.nessus.sign, 'libra');
+});
