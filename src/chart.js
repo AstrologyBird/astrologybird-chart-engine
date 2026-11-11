@@ -19,10 +19,10 @@ const BODIES = [
   ['sun', C.SE_SUN], ['moon', C.SE_MOON], ['mercury', C.SE_MERCURY], ['venus', C.SE_VENUS],
   ['mars', C.SE_MARS], ['jupiter', C.SE_JUPITER], ['saturn', C.SE_SATURN], ['uranus', C.SE_URANUS],
   ['neptune', C.SE_NEPTUNE], ['pluto', C.SE_PLUTO], ['northNode', C.SE_TRUE_NODE],
-  ['chiron', C.SE_CHIRON], ['lilith', C.SE_MEAN_APOG],
+  ['chiron', C.SE_CHIRON], ['pholus', C.SE_PHOLUS], ['nessus', C.SE_AST_OFFSET + 7066], ['lilith', C.SE_MEAN_APOG],
 ];
 const PERSONAL_WEIGHT = new Set(['sun', 'moon']);
-const MINOR_POINTS = new Set(['northNode', 'southNode', 'chiron', 'lilith', 'asc', 'mc']);
+const MINOR_POINTS = new Set(['northNode', 'southNode', 'chiron', 'pholus', 'nessus', 'lilith', 'asc', 'mc']);
 
 export const ASPECTS = [
   { type: 'conjunction', angle: 0, orb: 8 },

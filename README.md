@@ -11,7 +11,7 @@ because it uses the Swiss Ephemeris (Astrodienst AG) under its AGPL licence.
 
 ## Accuracy notes
 
-- Planets, nodes, Chiron and Lilith from the Swiss Ephemeris data files in `ephe/` (1800–2399).
+- Planets, nodes, Chiron, Pholus, Nessus and Lilith from the Swiss Ephemeris data files in `ephe/` (1800–2399). Nessus (minor planet 7066) uses `ephe/ast7/se07066s.se1` (Astrodienst, based on JPL DE441).
 - Historical time zones come from `zoneinfo/`, compiled **with** the IANA backzone data,
   so e.g. Dutch births before 1940 use Amsterdam time (+00:19:32 / +00:20). The default
   tz data in browsers and Node merged Amsterdam into Brussels and gets these wrong.
